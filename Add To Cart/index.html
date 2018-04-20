@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<title>Dreams - Add To Cart</title>
+<link rel="stylesheet" type="text/css" href="styles/index.css">
+<link rel="stylesheet" type="text/css" href="styles/media.css">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="js/cart.js"></script>
+<script src="js/elmsAction-dist.js"></script>
+<style type="text/css">
+    html,body{
+        @media only screen and(-webkit-min-device-pixel-ratio: 2),only screen and (-webkit-min-device-pixel-ratio: 1.5),only screen and (-moz-min-device-pixel-ratio: 2),only screen and (-o-min-device-pixel-ratio: 3/2),only screen and (-o-min-device-pixel-ratio: 2/1),only screen and (-moz-min-device-pixel-ratio: 1.5),only screen and (min-device-pixel-ratio: 1.5),only screen and (min-device-pixel-ratio: 2){
+    
+        }
+    }
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+    
+    $(".add-to-cart").click(function(){
+        var name = $(this).attr("data-name");
+        var price = Number($(this).attr("data-price"));
+        var urlImage = $(this).attr("data-image");
+        shoppingCart.addItemToCart(name,price,1,urlImage);
+        displayCart();
+    });
+    
+    $(".added-items").on("keyup",".intItemNumber",function(event){
+        var name = $(this).attr("data-name");
+        var count = Number($(this).val());
+        shoppingCart.setCountForItem(name,count);
+        displayCart();
+    });
+    
+    $(".added-items").on("click",".remove-item",function(){
+        var name = $(this).attr("data-name");
+        shoppingCart.removeItemFromCartAll(name);
+        displayCart();
+    });
+    
+    $(".added-items").on("click",".increase-item",function(){
+        var name = $(this).attr("data-name");
+        shoppingCart.addItemToCart(name,0,1);
+        displayCart();
+    });
+    
+    $(".added-items").on("click",".decrease-item",function(){
+        var name = $(this).attr("data-name");
+        shoppingCart.removeItemFromCart(name);
+        displayCart();
+    });
+    
+    function displayCart(){
+        var cartArray = shoppingCart.listCart();
+        console.log(cartArray);
+        var output = "";
+        for (var i in cartArray) {
+            output += '<div class="item-container"><div class="item-image-container"><img src="'+cartArray[i].imgURL+'" alt="Item Image"></div><div class="item-name-link-container"><div class="item-name"><a href="#" target="_blank" title="'+cartArray[i].name+'"><p>'+cartArray[i].name+'</p></a><p><input type="number" class="intItemNumber" data-name="'+cartArray[i].name+'" placeholder="'+cartArray[i].count+'" value="'+cartArray[i].count+'"> Items</p><p>Price: $'+cartArray[i].price+'&nbsp|&nbsp$'+cartArray[i].total+'</p></div></div>  <div class="idc-container"><div class="remove-item-container"><div class="remove-item" data-name="'+cartArray[i].name+'"><i>&nbsp;</i></div></div><div class="item-dec-inc-container"><div class="increase-item inc-dec" data-name="'+cartArray[i].name+'"><span>&nbsp;</span></div><div class="decrease-item inc-dec" data-name="'+cartArray[i].name+'"><span>&nbsp;</span></div></div></div>  </div>';
+        }
+        $(".added-items").html(output);
+        $(".total-price").html(shoppingCart.totalCart());
+        $(".total-items").html(shoppingCart.countCart());
+        $(".number-items").html(shoppingCart.countCart());
+        for (var x in cartArray) {
+            if(cartArray[x].count > 99){
+                $(".number-items").html("99");
+            }
+            
+        }
+    }
+    
+    
+    displayCart();
+});
+</script>
+</head>
+<body>
+    <section class="navigation-section">
+        <nav class="nav-container">
+            <div class="container">
+                <button class="view-cart-button"><span class="number-items">&nbsp;</span></button>
+            </div>
+        </nav>
+    </section>
+    <section class="all-items-gird-section">
+        <div class="items-grid-rows">
+            <div class="items-row-tiles">
+                <img src="https://bit.ly/2vpJ2Eo" alt="Item">
+                <div class="item-row-head-title">
+                    <span title="Floral Print A-Line Skirt">Floral Print A-Line Skirt</span>
+                </div>
+                <div class="item-row-footer-title">
+                    <span title="$112.00">$112.00</span>
+                    <span class="add-to-cart" data-name="Floral Print A-Line Skirt" data-image="https://bit.ly/2vpJ2Eo" data-price="112.00">Cart+</span>
+                </div>
+            </div>
+            <div class="items-row-tiles">
+                <img src="https://bit.ly/2HiTLlz" alt="Item">
+                <div class="item-row-head-title">
+                    <span title="Feminine Tulip Hem H-Line Skirt">Feminine Tulip Hem H-Line Skirt</span>
+                </div>
+                <div class="item-row-footer-title">
+                    <span title="$64.00">$64.00</span>
+                    <span class="add-to-cart" data-name="Feminine Tulip Hem H-Line Skirt" data-image="https://bit.ly/2HiTLlz" data-price="64.00">Cart+</span>
+                </div>
+            </div>
+            <div class="items-row-tiles">
+                <img src="https://bit.ly/2qL7gE6" alt="Item">
+                <div class="item-row-head-title">
+                    <span title="Modest Bridesmaid Dress">Modest Bridesmaid Dress</span>
+                </div>
+                <div class="item-row-footer-title">
+                    <span title="$72.32">$72.32</span>
+                    <span class="add-to-cart" data-name="Modest Bridesmaid Dress" data-image="https://bit.ly/2qL7gE6" data-price="72.32">Cart+</span>
+                </div>
+            </div>
+            <div class="items-row-tiles">
+                <img src="https://bit.ly/2HiDm07" alt="Item">
+                <div class="item-row-head-title">
+                    <span title="Tropical Floral Print H-Line Skirt">Tropical Floral Print H-Line Skirt</span>
+                </div>
+                <div class="item-row-footer-title">
+                    <span title="$93.00">$93.00</span>
+                    <span class="add-to-cart" data-name="Tropical Floral Print H-Line Skirt" data-image="https://bit.ly/2HiDm07" data-price="93.00">Cart+</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="all-items-details-section">
+        <nav class="aid-win-controls"><i></i></nav>
+        <div class="aid-items-container">
+            <div class="container">
+                <div class="added-items">
+                    &nbsp;
+                </div>
+                <div class="total-checkout-container">
+                    <p>
+                        <span class="spn-total-items">Items: <span class="total-items">&nbsp;</span></span>
+                        <span class="spn-total-price">Total Price: $<span class="total-price">&nbsp;</span></span>
+                        <a href="#"><span class="spn-checkout">Checkout</span></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
