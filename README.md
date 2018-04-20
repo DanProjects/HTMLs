@@ -1,2 +1,2 @@
 # HTMLs
-You are permitted to copy/modify codes.
+You are permitted to download/copy/modify codes.
