@@ -1,0 +1,338 @@
+@import "colors";
+@import "mixs";
+html,body{
+    @include html-settings;
+}
+*{
+    @include everything;
+}
+.navigation-section{
+    background-color: $white;
+    position: relative;
+    @include sizes(100%,auto);
+    z-index: 8;
+    @include user-select(none);
+    @include border-bottom(1px,solid,$hslaBlack01);
+    .nav-container{
+        background-color: $transparent;
+        position: relative;
+        @include sizes(100%,100%);
+        .container{
+            background-color: $transparent;
+            position: relative;
+            @include sizes(100%,100%);
+            @include mp(5px,5px,5px,5px,0,0,0,0);
+            text-align: right;
+            .view-cart-button{
+                background-image: url("../images/icons/cart.png");
+                @include bgSize(80%,80%);
+                @include bgAttachment(scroll);
+                @include bgRepeat(no-repeat);
+                @include bgPosition(center);
+                background-color: $transparent;
+                position: relative;
+                @include sizes(32px,32px);
+                right: 50px;
+                cursor: pointer;
+                @include mp(0,0,0,0,0,0,0,0);
+                @include border-radius;
+                @include border-none;
+                &:hover{
+                    background-color: $hslaBlack01;
+                }
+                span{
+                    background-color: $liteRed;
+                    position: absolute;
+                    @include sizes(16px,16px);
+                    top: -2px;
+                    right: -7px;
+                    @include font("Lato",sans-serif,10px,100,$white,0,center);
+                    @include mp(2px,2px,2px,2px,0,0,0,0);
+                    @include border-radius;
+                }
+            }
+        }
+    }
+}
+.all-items-gird-section{
+    background-color: $fafafa;
+    position: relative;
+    @include sizes(100%,auto);
+    @include mp(12px,12px,12px,12px,0,0,0,0);
+    .items-grid-rows{
+        background-color: $fafafa;
+        position: relative;
+        @include sizes(100%,auto);
+        @include mp(10px,10px,10px,10px,24px,0,24px,0);
+        @include border-bottom(1px,solid,$hslaBlack01);
+        .items-row-tiles{
+            background-color: $fafafa;
+            display: inline-block;
+            position: relative;
+            width: 280px;
+            @include mp(0,0,0,0,0,0,0,16px);
+            img{
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+            .item-row-head-title{
+                background-color: $hslaBlack08;
+                position: absolute;
+                @include sizes(100%,auto);
+                @include mp(8px,8px,8px,8px,0,0,0,0);
+                top: 0;
+                cursor: pointer;
+                @include font("Lato",sans-serif,16px,100,$white,1px,center);
+                @include user-select(none);
+                @include easings(200ms);
+                &:hover{
+                    background-color: $black;
+                }
+            }
+            .item-row-footer-title{
+                background-color: $hslaBlack08;
+                position: relative;
+                @include sizes(100%,auto);
+                @include mp(8px,8px,8px,8px,0,0,0,0);
+                @include translateY(-100%);
+                @include font("Lato",sans-serif,16px,100,$white,1px,center);
+                @include user-select(none);
+                .add-to-cart{
+                    position: absolute;
+                    right:10px;
+                    cursor: pointer;
+                    color: $lightGreen;
+                }
+            }
+        }
+    }
+}
+@keyframes loadItemDetails{
+    from{
+        opacity: 0;
+        display: none;
+    }
+    to{
+        opacity: 1;
+        display: block;
+    }
+}
+.all-items-details-section{
+    background-color: $fafafa;
+    opacity: 0;
+    display: none;
+    position: fixed;
+    @include sizes(100%,100%);
+    top: 0;
+    left: 0;
+    z-index: 9898989;
+    overflow: hidden;
+    @include animate(loadItemDetails,250ms);
+    .aid-win-controls{
+        background-color: inherit;
+        position: absolute;
+        @include sizes(100%,32px);
+        top: 0;
+        z-index: 8;
+        @include border-bottom(1px,solid,$lowBlack05);
+        i{
+            background-image: url("../images/icons/cross.png");
+            @include bgSize(12px,12px);
+            @include bgRepeat(no-repeat);
+            @include bgPosition(center);
+            background-color: inherit;
+            position: absolute;
+            @include sizes(22px,22px);
+            top: 5px;
+            right: 18px;
+            cursor: pointer;
+            @include border-right(1px,solid,$hslaBlack01);
+            @include border-left(1px,solid,$hslaBlack01);
+            @include border-radius;
+            @include transition(160ms);
+            &:hover{
+                background-color: hsla(0,0%,0%,0.05);
+                @include border-right(1px,solid,$transparent);
+                @include border-left(1px,solid,$transparent);
+            }
+        }
+    }
+    .aid-items-container{
+        background-color: inherit;
+        position: absolute;
+        @include sizes(100%,100%);
+        @include mp(32px,0,45px,0,0,0,0,0);
+        top: 0;
+        left: 0;
+        z-index: 0;
+        overflow: hidden;
+        .container{
+            background-color: inherit;
+            position: relative;
+            @include sizes(100%,100%);
+            overflow: auto;
+            overflow-x: hidden;
+            .added-items{
+                .item-container{
+                    background-color: inherit;
+                    position: relative;
+                    @include sizes(100%,auto);
+                    @include mp(14px,14px,14px,14px,0,0,0,0);
+                    @include border-bottom(1px,solid,$lowBlack05);
+                    .item-image-container{
+                        background-color: inherit;
+                        position: relative;
+                        @include sizes(80px,auto);
+                        z-index: 8;
+                        img{
+                            position: relative;
+                            display: block;
+                            @include sizes(100%,auto);
+                        }
+                    }
+                    .item-name-link-container{
+                        background-color: inherit;
+                        position: absolute;
+                        @include sizes(100%,100%);
+                        @include mp(0,80px,0,100px,0,0,0,0);
+                        top: 0;
+                        left: 0;
+                        z-index: 0;
+                        .item-name{
+                            background-color: inherit;
+                            display: inline-block;
+                            position: relative;
+                            @include sizes(100%,auto);
+                            @include font("Lato",sans-serif,16px,100,$black,1px,left);
+                            white-space: nowrap;
+                            overflow:hidden !important;
+                            text-overflow: ellipsis;
+                            top: 50%;
+                            left: 0;
+                            @include translateY(-50%);
+                            p{
+                                @include mp(5px,0,0,0,0,0,0,0);
+                                font-size: 14px;
+                                input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                }
+                                input{
+                                    background-color: $white;
+                                    -moz-appearance: textfield;
+                                    position: relative;
+                                    display: inline-block;
+                                    @include mp(0,7px,0,7px,0,0,0,0);
+                                    @include sizes(110px,18px);
+                                    @include border(1px,solid,$hslaBlack01);
+                                }
+                            }
+                            a{
+                                text-decoration: none;
+                                color: $black;
+                                p{
+                                    display: inline-block;
+                                    position: relative;
+                                    white-space: nowrap;
+                                    overflow:hidden !important;
+                                    text-overflow: ellipsis;
+                                    @include mp(0,0,0,0,0,0,0,0);
+                                }
+                            }
+                        }
+                    }
+                    .idc-container{
+                        background-color: inherit;
+                        position: absolute;
+                        @include sizes(70px,100%);
+                        @include mp(18px,0,0,0,0,0,0,0);
+                        right: 0;
+                        top: 0;
+                        @include user-select(none);
+                        .remove-item-container{
+                            background-color: inherit;
+                            position: relative;
+                            @inlcude fixMP;
+                            @include sizes(100%,auto);
+                            .remove-item{
+                                background-image: url("../images/icons/cross.png");
+                                @include bgSize(12px,12px);
+                                @include bgRepeat(no-repeat);
+                                @include bgPosition(center);
+                                background-color: inherit;
+                                position: relative;
+                                @include sizes(24px,24px);
+                                @include border-radius;
+                                right: -40px;
+                                cursor: pointer;
+                                @include border-right(1px,solid,$hslaBlack01);
+                                @include border-left(1px,solid,$hslaBlack01);
+                            }
+                        }
+                        .item-dec-inc-container{
+                            background-color: inherit;
+                            position: absolute;
+                            @include sizes(100%,auto);
+                            top: 45%;
+                            .inc-dec{
+                                background-color: inherit;
+                                position: relative;
+                                display: block;
+                                @include sizes(20px,20px);
+                                @include border-radius;
+                                left: 0;
+                                right: 0;
+                                cursor: pointer;
+                                @include mp(0,0,0,0,4px,auto,0,auto);
+                                @include border-right(1px,solid,$hslaBlack01);
+                                @include border-left(1px,solid,$hslaBlack01);
+                            }
+                            .increase-item{
+                                background-image: url("../images/icons/increase.png");
+                                @include bgSize(12px,12px);
+                                @include bgRepeat(no-repeat);
+                                @include bgPosition(center);
+                            }
+                            .decrease-item{
+                                background-image: url("../images/icons/decrease.png");
+                                @include bgSize(12px,12px);
+                                @include bgRepeat(no-repeat);
+                                @include bgPosition(center);
+                            }
+                        }
+                    }
+                }
+            }
+            .total-checkout-container{
+                background-color: inherit;
+                position: fixed;
+                @include sizes(100%,45px);
+                bottom: 0;
+                left: 0;
+                @include border-top(1px,solid,$hslaBlack01);
+                p{
+                    @include mp(0,0,0,0,0,0,0,0);
+                    vertical-align: middle;
+                    line-height: 45px;
+                    @include font("Lato",sans-serif,14px,100,$black,1px,left);
+                    a{
+                        text-decoration: none;
+                        color: $black;
+                    }
+                    .spn-total-items{
+                        @include mp(4px,4px,4px,4px,0,0,0,0);
+                    }
+                    .spn-total-price{
+                        @include mp(12px,12px,12px,12px,0,0,0,0);
+                    }
+                    .spn-checkout{
+                        position: absolute;
+                        right: 20px;
+                        color: $darkGreen;
+                    }
+                }
+            }
+        }
+    }
+}

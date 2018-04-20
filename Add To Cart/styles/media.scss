@@ -1,0 +1,7 @@
+@import "colors";
+@import "mixs";
+@include pxRatio{
+    html,body{
+        background-image: url("../img/backgrounds/snowVolcano@x2.jpg");
+    }
+}

@@ -1,0 +1,118 @@
+:root{
+    --outline:none;
+    --box-sizing:border-box;
+    --transition: all 250ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    /*Background Settings*/
+    --bg-color:var(--color-lwWhite);
+    --bg-attachment:fixed;
+    --bg-size:cover;
+    --bg-position:center;
+    --bg-repeat:no-repeat;
+    /*Text Decoration*/
+    --text-decoration-none:none;
+    --text-decoration-u: underline;
+    /*Fonts*/
+    --font-family01: "Lato",sans-serif;
+    --font-size01: 16px;
+    --font-size02: 17px;
+    --font-size03: 14px;
+    --font-size04: 12px;
+    --font-weight01: 100;
+    --font-weight02: bold;
+    --letter-spacing01: 1px;
+    --letter-spacing02:0;
+    --text-align-center:center;
+    --text-align-left:left;
+    --text-align-right:right;
+    /*Overflows*/
+    --no-overflow:hidden;
+    --no-x-axis:hidden;
+    --auto-overflow:auto;
+    /*Positions*/
+    --pos-relative:relative;
+    --pos-absolute:absolute;
+    --pos-fixed:fixed;
+    /*Displays*/
+    --display0:none;
+    --display1:block;
+    --display2:inline;
+    --display3:inline-block;
+    --display4:flex;
+    /*Opacities*/
+    --opacity1: 0;
+    --opacity2: 1;
+    /*Animations*/
+    --animation-timing01:cubic-bezier(0.645,0.045,0.355,1);
+    /*Body Sizes*/
+    --max-width:100%;
+    --max-height:100%;
+    --automative-width: auto;
+    --automative-height: auto;
+    /*paddings*/
+    --no-padding0: 0;
+    /*margins*/
+    --no-margin0:0;
+    --margin01:auto;
+    /*Sides*/
+    --top0: 0;
+    --left0: 0;
+    --right0: 0;
+    --bottom0: 0;
+    /*Borders*/
+    --border0:none;
+    --border01: 1px solid var(--color-black01);
+    --border02: 1px solid var(--color-black02);
+    --border-bottom0: none;
+    --border-bottom1: 1px solid hsla(0,0%,0%,0.1);
+    --border-bottom2: 1px solid hsla(0,0%,0%,0.2);
+    --border-bottom3: 1px solid hsla(0,0%,0%,0.1);
+    --border-bottom4: 1px solid hsla(0,0%,0%,0.2);
+    /*Border Radius*/
+    --radius0:0;
+    --radius1:720px;
+    /*Cursors*/
+    --cursor1: pointer;
+    --cursor2: default;
+    /*Vertical Align*/
+    --vertical-align-baseline: baseline;
+    --vertical-align-bottom: bottom;
+    --vertical-align-inherit: inherit;
+    --vertical-align-middle: middle;
+    --vertical-align-sub: sub;
+    --vertical-align-super: super;
+    --vertical-align-text-bottom: text-bottom;
+    --vertical-align-text-top: text-top;
+    --vertical-align-top: top;
+    /*Line Height*/
+    --line-height0:0;
+    --line-height01:36px;
+    /*z-indexes*/
+    --z-index08:8;
+    /*colors*/
+    --red: red;
+    --transparent:transparent;
+    --color-lighter01-black:#333333;
+    --color-white:#ffffff;
+    --color-black:#000000;
+    --color-lwWhite:#fafafa;
+    --color-f3f3: #f3f3f3;
+    --color-cold01-red: hsla(343, 100%, 35%, 1);
+    --color-white01: hsla(100,100%,100%,0.1);
+    --color-white02: hsla(100,100%,100%,0.2);
+    --color-white03: hsla(100,100%,100%,0.3);
+    --color-white04: hsla(100,100%,100%,0.4);
+    --color-white05: hsla(100,100%,100%,0.5);
+    --color-white06: hsla(100,100%,100%,0.6);
+    --color-white07: hsla(100,100%,100%,0.7);
+    --color-white08: hsla(100,100%,100%,0.8);
+    --color-white09: hsla(100,100%,100%,0.9);
+    --color-black01: hsla(0,0%,0%,0.1);
+    --color-black02: hsla(0,0%,0%,0.2);
+    --color-black03: hsla(0,0%,0%,0.3);
+    --color-black04: hsla(0,0%,0%,0.4);
+    --color-black05: hsla(0,0%,0%,0.5);
+    --color-black06: hsla(0,0%,0%,0.6);
+    --color-black07: hsla(0,0%,0%,0.7);
+    --color-black08: hsla(0,0%,0%,0.8);
+    --color-black09: hsla(0,0%,0%,0.9);
+}
