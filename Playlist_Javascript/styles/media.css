@@ -1,0 +1,20 @@
+@media only screen and (max-width:560px){
+    div.search-toggle{
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+    div.search-container{
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+    img.main-cover{
+        width: 95%;
+    }
+}
+@media only screen and (max-width:648px){
+    div.controls-play{
+        margin: 0 0 0 12px;
+    }
+}
