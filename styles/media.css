@@ -1,0 +1,278 @@
+@media (max-width:1120px){
+    div.cols{
+        width: 100px;
+    }
+}
+@media (max-width:1024px){
+    div.welcome-head-cover{
+        position: relative;
+        background-attachment: scroll;
+    }
+    div.footer-cover{
+        background-attachment: scroll;
+    }
+    div.pricing-cover{
+        background-attachment: scroll;
+    }
+    div.portfolio-imgs:hover{
+        opacity: 1;
+    }
+    div.close-preview{
+        background-color: hsla(0,0%,0%,0.1);
+        width: 50px;
+        height: 50px;
+        top: 12px;
+        right: 12px;
+    }
+    div.close-preview:hover{
+        background-color: hsla(0,0%,0%,0.1);
+    }
+    a.subscribe-plan:hover{
+        background-color: hsla(115,100%,44%,0.4);
+    }
+    div.contact-form-cover{
+        background-attachment: scroll;
+    }
+    div.contact-form-frame form input[type="submit"]:hover{
+        background-color: hsla(192, 100%, 65%, 1);
+    }
+}
+@media (max-width:980px){
+    div.portfolio-imgs-frame{
+        width: 720px;
+    }
+    div.portfolio-imgs{
+        width: 180px;
+        height: 180px;
+    }
+    div.cols{
+        width: 120px;
+    }
+    div.pricing-columns-frame{
+        display: auto;
+        table-layout: inherit;
+        width: 720px;
+        border-spacing: 24px;
+    }
+}
+@media (max-width:900px){
+    nav.nv-items ul li{
+    display: inline-block;
+    padding: 15px;
+    width: 100px;
+    margin: 0;
+    font-family: 'Lato',sans-serif;
+    font-size: 17px;
+    color: #333333;
+    text-align: center;
+    border-bottom: 1px solid hsla(0,0%,0%,0);
+    }
+}
+@media (max-width:842px){
+    div.footer-cover-texts-frame{
+        max-height: 190px;
+    }
+}
+@media (max-width:768px){
+    nav.nv-items{
+        display: none !important;
+        visibility: hidden !important;
+    }
+    div.media-nav-button{
+    background-color: transparent;
+    position: relative;
+    display: block;
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    }
+    div.welcome-banner-hyp-frame a:hover{
+        background-color: transparent;
+        border: 1px solid hsla(100,100%,100%,0.8);
+    }
+    div.footer-cover-btn-direct a:hover{
+        background-color: transparent;
+        border: 1px solid hsla(100,100%,100%,0.8);
+    }
+    div.portfolio-imgs-frame{
+        width: 400px;
+    }
+    div.portfolio-imgs{
+        width: 100px;
+        height: 100px;
+    }
+    div.cols{
+        width: 120px;
+    }
+    div.pricing-columns-frame{
+        display: auto;
+        table-layout: inherit;
+        width: 520px;
+        border-spacing: 24px;
+    }
+    div.col-header{
+        padding: 20px;
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+    div.darker-col-row{
+        font-size: 14px;
+    }
+    div.lighter-col-row{
+        font-size: 14px;
+    }
+}
+@media (max-width:648px){
+    div.welcome-banner-frame{
+        bottom: 15%;
+    }
+    p.elm-full-width{
+        width:300px;
+        display: inline-block;
+    }
+    div.contact-form-frame form input[type="submit"]{
+        width: 100%;
+    }
+    p.submit-full-width{
+        display: block;
+        width: 300px;
+    }
+}
+@media (max-width:600px){
+    div.welcome-banner-text p{
+        padding: 0;
+        margin: 0;
+        font-family: 'Lato',sans-serif;
+        font-size: 20px;
+        color: #FFFFFF;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+    div.about-section-image-frame img{
+        width: 120px;
+        height: 120px;
+    }
+    div.about-section-text-frame span{
+        font-size: 14px;
+    }
+    div.about-section-text p{
+        width: 300px;
+        font-size: 14px;
+    }
+    div.footer-cover-texts span{
+        font-size: 16px;
+    }
+    div.footer-cover-texts p{
+        font-size: 20px;
+    }
+    div.cols{
+        background-color: transparent;
+        display: block;
+        width:100%;
+        padding: 12px;
+    }
+    div.pricing-columns-frame{
+        display: auto;
+        table-layout: inherit;
+        width: 100%;
+        border-spacing: 0;
+    }
+    div.col-header{
+        padding: 24px;
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+    div.darker-col-row{
+        background-color: hsla(0, 0%, 95%, 1);
+        font-size: 16px;
+    }
+    div.lighter-col-row{
+        background-color: #FFFFFF;
+        font-size: 16px;
+    }
+}
+@media (max-width:480px){
+    div.head-navigation{
+        height: 110px;
+    }
+    div.navigation-frame{
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    top: 38px;
+    padding-left: 15px;
+    padding-right: 15px;
+    }
+    div.logo-frame{
+    background-color: transparent;
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    z-index: 9;
+    border-radius: 720px;
+    }
+    div.media-nav-button{
+    background-image: url(../images/icons/bars.svg);
+    background-size: 34px;
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    background-color: transparent;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: -3px;
+    cursor: pointer;
+    text-align: center;
+    }
+    div.welcome-banner-text span{
+        padding: 0;
+        font-family: 'Lato',sans-serif;
+        font-size: 14px;
+        color: #FFFFFF;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+    div.welcome-banner-text p{
+        padding: 0;
+        margin: 0;
+        font-family: 'Lato',sans-serif;
+        font-size: 16px;
+        color: #FFFFFF;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+    div.footer-cover-texts span{
+        font-size: 14px;
+    }
+    div.footer-cover-texts p{
+        font-size: 16px;
+    }
+    div.portfolio-imgs-frame{
+        width: 300px;
+    }
+    div.portfolio-imgs{
+        width: 150px;
+        height: 150px;
+    }
+    p.contact-head-title{
+        font-size: 18px;
+    }
+}
+@media (max-width:350px){
+    div.about-section-image-frame img{
+        width: 90px;
+        height: 90px;
+    }
+    div.cols{
+        background-color: transparent;
+        display: block;
+        width:100%;
+        padding: 12px;
+    }
+}
+@media (max-width:320px){
+    
+}
