@@ -1,6 +1,0 @@
-@mixin global-selects($radius){
-	border-radius: $radius;
-}
-*{
-	@include global-selects(720px);
-}
